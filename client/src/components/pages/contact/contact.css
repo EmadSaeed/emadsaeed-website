@@ -1,0 +1,70 @@
+.contact {
+    padding: 60px;
+    flex: 9;
+    height:  100vh;
+    position: sticky;
+    background-color: rgb(53, 53, 53);
+    text-align: center;
+}
+
+/* .formContainer {
+    padding: 150px 30%;
+    background-color: red;
+} */
+
+
+.contactForm {
+    padding-bottom: 20px;
+}
+
+.MuiFormControl-root {
+    width: 90%;
+    margin-top: 15px !important;
+}
+.contactSubmitButton {
+    background-color: #006a31 !important;
+    width: 90%;
+    margin-top: 25px !important;
+    cursor: pointer !important;
+    font-size: 1.2em !important;
+
+}
+.contactMe {
+    color: #7bfab6;
+    font-size: 4em;
+}
+
+.contactParagraph {
+    color: #fff;
+    font-weight: 200;
+}
+.contactParticles {
+    position: fixed;
+    top: 0;
+    left: 10%;
+    width: 90%;
+    height: 100vh;
+    z-index: -100;
+}
+.hello_1 {
+    color: #7bfab6;
+    text-decoration: none;
+    font-size: 1.4em;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+}
+
+#contact .MuiPaper-root {
+    padding-top: 20px;
+}
+
+@media (orientation: portrait) {
+    .contact {
+        max-height: 100vh;
+        padding: 20px;
+    }
+
+    .contactParagraph {
+        font-size: 1.1em;
+    }
+}

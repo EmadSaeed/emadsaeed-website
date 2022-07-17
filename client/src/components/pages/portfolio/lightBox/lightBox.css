@@ -1,0 +1,68 @@
+:root {
+    --lightboxWidth: 80%;
+  }
+
+#lightBoxOverlay {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    min-height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+#projectDetails {
+    width: var(--lightboxWidth);
+    height: 100vh;
+    padding: 30px 20px;
+    background: #fff;
+    position: relative;
+    z-index: 101;
+    overflow: scroll;
+}
+
+.closeButton {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: calc(calc(100% - var(--lightboxWidth)) - 32px);
+    color: #fff;
+    font-size: 1.8em;
+    cursor: pointer;
+    z-index: 102;
+}
+
+header {
+    color: black;
+    margin-top: 20px;
+    text-align: left;
+    font-size: 1.4em;
+    font-weight: thin;
+  }
+
+  .tecUsed {
+      margin-bottom: 60px;
+  }
+
+  .screenshotImg {
+      width: 90%;
+      margin-left: 5%;
+      margin-bottom: 30px;
+      border: 1px solid black;
+  }
+
+  .mainScreenshotImg {
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+
+
+  li {
+    list-style-type: none;
+  }

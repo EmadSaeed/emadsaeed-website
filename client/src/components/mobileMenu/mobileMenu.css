@@ -1,0 +1,119 @@
+.mobileMenu {
+    flex: 1;
+    min-height:  100vh;
+    background-color: #292929;
+    margin: 0;
+    padding: 0;
+}
+
+.mobileMenuLogoContainer {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    background-color: #131313;
+}
+
+.mobileMenuLogoContainer a{
+    text-decoration: none !important;
+}
+
+.mobileMenuEmadsaeed-logo {
+    max-width: 60%;
+    cursor: pointer;
+}
+
+.mobileMenuName, .mobileMenuTitle {
+    color: #fff;
+    font-weight: 300;
+    margin: 0;
+}
+
+.mobileMenuName {
+    margin-top: 10px;
+}
+
+.mobileMenuTitle {
+    font-size: 0.7em;
+    margin-top: 5px;
+}
+
+.mobileMenuUL {
+    padding: 0;
+    margin-top: 0;
+    width: 100%;
+}
+
+.mobileMenuNavLink {
+    color: #7bfab6;
+    text-decoration: none;
+    display: flex;
+    align-items: center !important;
+    justify-content: center;
+    padding: 0 15px;
+    border-bottom: solid 1px rgb(82, 82, 82);
+}
+
+.mobileMenuLink {
+    font-weight: 600;
+    font-size: 0.9em;
+    margin: 0;
+    padding: 10px 3px;
+    list-style: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.mobileMenuNavLink:hover {
+    background-color: #292929;
+    cursor: pointer;
+}
+
+.selected {
+    color: #fff !important;
+    background-color: #006a31 !important;
+}
+
+.selected .mobileMenuLink {
+    background-color: #006a31 !important;
+}
+
+.mobileMenuLinkIcon {
+    max-height: 15px !important;
+    cursor: pointer;
+}
+
+.socialIconsContainer {
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 8.5%;
+}
+
+.socialIcon {
+    color: #fff;
+    width: 20px !important;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+
+@media (orientation: portrait) {   
+    .mobileMenu {
+        position: absolute;
+        z-index: 1001;
+        width: 85vw;
+    }
+    .logoContainer {
+        display: none;
+    }
+}
+
+@media (orientation: landscape) { 
+    .mobileMenu {
+        display: none;
+    }
+}
+

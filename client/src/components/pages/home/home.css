@@ -1,0 +1,145 @@
+.particles {
+    height: 100% !important;
+    z-index: 1;
+}
+
+.home {
+    flex: 9;
+    height: 100vh;
+    max-height:  100vh;
+    background-color: #000;
+    position: relative;
+}
+
+.homeContainer {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slideContainer {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+}
+
+img.mainSlide {
+    max-height: 100%;
+    max-width: 80%;
+}
+
+.infoContainer {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding-bottom: 80px;
+}
+
+.nameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+}
+.mainName {
+    font-weight: 600;
+    font-size: 2.6em;
+    color: #fff;
+}
+
+.mainTitle {
+    font-weight: 300;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.slogan {
+    margin-top: 60px;
+    font-weight: 500;
+    color: #11B35C;
+    background-color: #000;
+}
+
+
+.contactMeBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.downArrow {
+    color: white;
+    font-size: small;
+}
+
+.contactMeBtn a {
+    color: white !important;
+}
+
+.contactMeBtn a:hover {
+    color: #11B35C !important;
+    
+}
+
+.mobileMainSlide {
+    display: none;
+}
+
+@media (orientation: portrait) {
+    .mainSlide {
+        display: none;
+    }
+
+    .home {
+        height: calc(100vh - 80px);
+        max-height: calc(100vh - 80px);
+    }
+    
+    
+    .hamburger-react {
+        z-index: 5000;
+    }
+    .hamburger-react div {
+        background: #fff !important;
+    }
+    
+    .slideContainer {
+        height: 70%;
+        padding-top: 0px;
+        margin-top: -10px;
+    }
+    
+    .mobileMainSlide {
+        display: block;
+        max-height: 100%;
+    }
+
+    .infoContainer {
+        height: 30%;
+    }
+
+    .mainName {
+        font-size: 2.2em;
+    }
+    .mainTitle {
+        font-size: 1.1em;
+    }
+    .slogan {
+        font-size: 1.4em;
+        margin-top: 10px;
+    }
+    /* .contactMeBtn {
+        margin-top: 20px !important;
+    } */
+}

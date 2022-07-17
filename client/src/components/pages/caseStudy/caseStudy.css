@@ -1,0 +1,6 @@
+.caseStudy {
+    flex: 9;
+    height:  100vh;
+    position: sticky;
+    background-color: #fff;
+}
