@@ -20,22 +20,30 @@ function LightBox({ lightBoxDisplay, setLightBoxDisplay, boxId }) {
                         <div className="closeButton" onClick={() => { setLightBoxDisplay(true) }}><ClearIcon /></div>
                         <div>
                             <header>Project: <strong>{lightBoxSelectedData.projectName}</strong></header>
-                            <a href={lightBoxSelectedData.projectLink} target="_blank" rel="noreferrer noopener" style={{ display: lightBoxSelectedData.linkDisplayed }}>{lightBoxSelectedData.projectLink} </a>
-                            <img className="mainScreenshotImg screenshotImg" src={lightBoxSelectedData.mainImg} />
-                            <header>Description: </header>
-                            <article className="description">{lightBoxSelectedData.projectDescription}</article>
-                            <div>
-                                {lightBoxSelectedData.screenshots.map((screenshot, i) => (
-                                    <img className="screenshotImg" key={i + 1} src={screenshot} alt="screenshot" />
-                                ))}
+
+                            {/* Link */}
+                            <div linkContainer style={{ display: lightBoxSelectedData.linkDisplayed }}>
+                                <a href={lightBoxSelectedData.projectLink} target="_blank" rel="noreferrer noopener" style={{ display: lightBoxSelectedData.linkDisplayed }}>{lightBoxSelectedData.projectLink} </a>
                             </div>
-                            <header>Features: </header>
-                            <ul>
-                                {lightBoxSelectedData.featurs.map((feature, i) => (
-                                    <li key={i + 1}><CheckIcon style={{ marginRight: "10px", fontSize: "small" }} />{feature}</li>
-                                ))}
-                            </ul>
-                            <div className="tecUsed">
+
+                            {/* Description */}
+                            <div className="descriptionContainer" style={{ display: lightBoxSelectedData.descriptionDisplayed }}>
+                                <header>Description: </header>
+                                <article className="description">{lightBoxSelectedData.projectDescription}</article>
+                            </div>
+
+                            {/* Features */}
+                            <div className="featureContainer" style={{ display: lightBoxSelectedData.featureDisplayed }}>
+                                <header>Features: </header>
+                                <ul>
+                                    {lightBoxSelectedData.featurs.map((feature, i) => (
+                                        <li key={i + 1}><CheckIcon style={{ marginRight: "10px", fontSize: "small" }} />{feature}</li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            {/* TecUsed */}
+                            <div className="tecUsed" style={{ display: lightBoxSelectedData.tecUsedDisplayed }}>
                                 <header>Technology Used: </header>
                                 <ul>
                                     {lightBoxSelectedData.tecUsed.map((tec) => (
@@ -43,6 +51,20 @@ function LightBox({ lightBoxDisplay, setLightBoxDisplay, boxId }) {
                                     ))}
                                 </ul>
                             </div>
+
+                            {/* Project Iframe */}
+                            <div className="projectIframe">
+                                <iframe src={lightBoxSelectedData.projectLink}></iframe>
+                            </div>
+
+                            {/* screenshots */}
+                            <div className="screenshotsContainer" style={{ display: lightBoxSelectedData.screenshotsDisplayed }}>
+                                {lightBoxSelectedData.screenshots.map((screenshot, i) => (
+                                    <img className="screenshotImg" key={i + 1} src={screenshot} alt="screenshot" />
+                                ))}
+                            </div>
+
+
                         </div>
                     </div>
                 </div>

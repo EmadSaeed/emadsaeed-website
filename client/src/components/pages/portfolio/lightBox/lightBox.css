@@ -26,6 +26,17 @@
     overflow: scroll;
 }
 
+.projectIframe {
+    margin: auto;
+    text-align: center;
+}
+
+.projectIframe iframe{
+    width: 90%;
+    height: 80vh;
+
+}
+
 .closeButton {
     position: fixed;
     width: 30px;
