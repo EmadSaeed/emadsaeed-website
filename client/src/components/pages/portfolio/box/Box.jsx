@@ -2,6 +2,11 @@ import "./box.css";
 const boxImages = [
     {
         box_id: 1,
+        image_1: "Alexmed-sq-1.jpg",
+        image_2: "Alexmed-sq-2.jpg"
+    },
+    {
+        box_id: 1,
         image_1: "kitwizard-sq-1.jpg",
         image_2: "kitwizard-sq-2.jpg"
     },
@@ -66,8 +71,8 @@ function Box({ setBoxId, setLightBoxDisplay }) {
                     setBoxId(img.box_id);
                     console.log(img.box_id)
                 }}>
-                    <img src={`/imgs/boxImages/${img.image_1}`} alt="" className="square_1" />
-                    <img src={`/imgs/boxImages/${img.image_2}`} alt="" className="square_2" />
+                    <img className="square_1" src={`/imgs/boxImages/${img.image_1}`} alt="" />
+                    <img className="square_2" src={`/imgs/boxImages/${img.image_2}`} alt="" />
                 </div>
             ))
             }

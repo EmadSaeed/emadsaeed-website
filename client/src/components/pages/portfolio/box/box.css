@@ -21,6 +21,7 @@
     margin: 0;
     padding: 0;
     transition: all 0.7s ease-in-out;
+    cursor: pointer !important;
 }
 
 .square_2 {
@@ -31,6 +32,7 @@
     margin: 0;
     padding: 0;
     z-index: -2;
+    cursor: pointer !important;
 }
 
 .square_1:hover {

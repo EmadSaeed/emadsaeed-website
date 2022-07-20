@@ -46,6 +46,10 @@ header {
     font-weight: thin;
   }
 
+  .description {
+    margin-bottom: 50px;
+  }
+
   .tecUsed {
       margin-bottom: 60px;
   }

@@ -20,9 +20,15 @@ function LightBox({ lightBoxDisplay, setLightBoxDisplay, boxId }) {
                         <div className="closeButton" onClick={() => { setLightBoxDisplay(true) }}><ClearIcon /></div>
                         <div>
                             <header>Project: <strong>{lightBoxSelectedData.projectName}</strong></header>
-                            <a href={lightBoxSelectedData.projectLink} style={{ display: lightBoxSelectedData.linkDisplayed }}>{lightBoxSelectedData.projectLink} </a>
+                            <a href={lightBoxSelectedData.projectLink} target="_blank" rel="noreferrer noopener" style={{ display: lightBoxSelectedData.linkDisplayed }}>{lightBoxSelectedData.projectLink} </a>
                             <img className="mainScreenshotImg screenshotImg" src={lightBoxSelectedData.mainImg} />
-                            <header>Description: </header><article>{lightBoxSelectedData.projectDescription}</article>
+                            <header>Description: </header>
+                            <article className="description">{lightBoxSelectedData.projectDescription}</article>
+                            <div>
+                                {lightBoxSelectedData.screenshots.map((screenshot, i) => (
+                                    <img className="screenshotImg" key={i + 1} src={screenshot} alt="screenshot" />
+                                ))}
+                            </div>
                             <header>Features: </header>
                             <ul>
                                 {lightBoxSelectedData.featurs.map((feature, i) => (
@@ -36,11 +42,6 @@ function LightBox({ lightBoxDisplay, setLightBoxDisplay, boxId }) {
                                         <li key={tec.tecId}><ArrowRightIcon style={{ marginRight: "30px" }} /><img src={tec.tecIcon} /></li>
                                     ))}
                                 </ul>
-                            </div>
-                            <div>
-                                {lightBoxSelectedData.screenshots.map((screenshot, i) => (
-                                    <img className="screenshotImg" key={i + 1} src={screenshot} alt="screenshot" />
-                                ))}
                             </div>
                         </div>
                     </div>
