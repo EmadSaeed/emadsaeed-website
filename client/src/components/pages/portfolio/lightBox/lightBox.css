@@ -34,6 +34,7 @@
 .projectIframe iframe{
     width: 90%;
     height: 80vh;
+    border: 2px solid black;
 
 }
 

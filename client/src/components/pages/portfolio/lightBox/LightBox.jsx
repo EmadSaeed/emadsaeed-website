@@ -15,14 +15,14 @@ function LightBox({ lightBoxDisplay, setLightBoxDisplay, boxId }) {
     return (
         <div className="lightBox" style={{ display: lightBoxDisplay ? 'none' : 'block' }}>
             {lightBoxData.filter(item => item.lightBoxId === boxId).map(lightBoxSelectedData => (
-                <div key={lightBoxSelectedData.lightBoxId} id="lightBoxOverlay" onClick={() => { setLightBoxDisplay(true) }}>
+                <div key={lightBoxSelectedData.lightBoxId} id="lightBoxOverlay" >
                     <div id="projectDetails">
                         <div className="closeButton" onClick={() => { setLightBoxDisplay(true) }}><ClearIcon /></div>
                         <div>
                             <header>Project: <strong>{lightBoxSelectedData.projectName}</strong></header>
 
                             {/* Link */}
-                            <div linkContainer style={{ display: lightBoxSelectedData.linkDisplayed }}>
+                            <div linkContainer style={{ display: lightBoxSelectedData.projectLinkDisplayed }}>
                                 <a href={lightBoxSelectedData.projectLink} target="_blank" rel="noreferrer noopener" style={{ display: lightBoxSelectedData.linkDisplayed }}>{lightBoxSelectedData.projectLink} </a>
                             </div>
 
